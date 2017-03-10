@@ -16,7 +16,7 @@ public class LogIn extends AppCompatActivity {
 
     public void loginClicked(View view) {
         System.out.println("kijhdfskjh");
-    }
+    }//j
 
     //TextView textViewSignIn = (TextView) findViewById(R.id.textView_signUp);
     //textViewSignIn.setMovementMethod(LinkMovementMethod.getInstance());
