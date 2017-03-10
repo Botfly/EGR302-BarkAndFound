@@ -16,9 +16,19 @@ public class LogIn extends AppCompatActivity {
         setContentView(R.layout.activity_log_in);
     }
 
-    public void loginClicked(View view) {
-        setContentView(R.id.activity_log_in);
-        System.out.println("kijhdfskjh");
+    public void loginClicked(View view) { //redirect to the xml page after user logs in
+        setContentView(R.layout.activity_log_in);
+        System.out.println("log in clicked");
+    }
+
+    public void signUpClicked(View view) { //redirect to Sign Up xml page
+        setContentView(R.layout.activity_log_in);
+        System.out.println("sign up clicked");
+    }
+
+    public void forgotPasswordClicked(View view) { //redirect to Forgot Password xml page
+        setContentView(R.layout.activity_log_in);
+        System.out.println("forgot password clicked");
     }
 
 //    Button btn = (Button)findViewById(R.id.Button_LogIn);
