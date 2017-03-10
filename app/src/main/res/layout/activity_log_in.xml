@@ -103,6 +103,7 @@
         android:textSize="12sp"
         android:layout_marginTop="390dp"
         android:layout_centerHorizontal="true"
+        android:onClick="signUpClicked"
         />
 
     <!--Forgot Password?: -->
@@ -114,6 +115,7 @@
         android:textSize="12sp"
         android:layout_marginTop="430dp"
         android:layout_centerHorizontal="true"
+        android:onClick="forgotPasswordClicked"
         />
 
 </RelativeLayout>
