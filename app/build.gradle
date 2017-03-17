@@ -25,9 +25,9 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     compile 'com.android.support:appcompat-v7:25.1.1'
-<<<<<<< HEAD
-=======
-    compile 'com.android.support.constraint:constraint-layout:1.0.1'
->>>>>>> d9e160c9206d85415aa7e41fa071df61ad95f760
+//<<<<<<< HEAD
+//=======
+//    compile 'com.android.support.constraint:constraint-layout:1.0.1'
+//>>>>>>> d9e160c9206d85415aa7e41fa071df61ad95f760
     testCompile 'junit:junit:4.12'
 }
