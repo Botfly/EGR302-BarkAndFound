@@ -14,7 +14,7 @@
     <!--app logo: -->
     <ImageView
         android:id="@+id/imageView_AppLogo"
-        android:src="@drawable/desktop2"
+        android:src="@drawable/Acer02"
 
         android:layout_centerHorizontal="true"
         android:layout_width="90dp"
