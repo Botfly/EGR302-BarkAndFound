@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "875269000280",
+    "firebase_url": "https://petscanner-d7650.firebaseio.com",
+    "project_id": "petscanner-d7650",
+    "storage_bucket": "petscanner-d7650.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:875269000280:android:6c7757fc8c53fe51",
+        "android_client_info": {
+          "package_name": "com.example.botfly.petscanner"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "875269000280-sc8e0rsgofr9acup7qmqge05nh3ojfcc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.botfly.petscanner",
+            "certificate_hash": "f177aa48c9d1463364ddf1ffd1c67328bca5819f"
+          }
+        },
+        {
+          "client_id": "875269000280-g9ghc044hvl949kp6ng7h6v58ailfib6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAhUN36I18-3eonpSbKhkSKsWSIhe9D6uM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "875269000280-g9ghc044hvl949kp6ng7h6v58ailfib6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
