@@ -18,7 +18,7 @@ public class LoadingScreen extends AppCompatActivity {
             public void run() {
                 try {
                     super.run();
-                    sleep(200000);  //Delay of 10 seconds
+                    sleep(3000); //delay
                 } catch (Exception e) {
 
                 } finally {
@@ -34,7 +34,7 @@ public class LoadingScreen extends AppCompatActivity {
     }
 
     public void redirectToLogIn(View view){
-
+        setContentView(R.layout.activity_log_in);
     }
 
 }
