@@ -18,7 +18,9 @@
         android:layout_alignBaseline="@+id/Register"
         android:layout_alignBottom="@+id/Register"
         android:layout_alignRight="@+id/confirmPassword"
-        android:layout_alignEnd="@+id/confirmPassword" />
+        android:layout_alignEnd="@+id/confirmPassword"
+        android:onClick="cancelClicked"
+        />
 
     <Button
         android:text="Register"

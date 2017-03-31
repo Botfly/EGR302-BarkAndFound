@@ -1,12 +1,8 @@
 package com.example.botfly.petscanner;
 
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.method.LinkMovementMethod;
 import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
 
 public class LogIn extends AppCompatActivity {
 
@@ -22,13 +18,18 @@ public class LogIn extends AppCompatActivity {
     }
 
     public void signUpClicked(View view) { //redirect to Sign Up xml page
-        setContentView(R.layout.activity_log_in);
+        setContentView(R.layout.activity_register);
         System.out.println("sign up clicked");
     }
 
     public void forgotPasswordClicked(View view) { //redirect to Forgot Password xml page
         setContentView(R.layout.activity_log_in);
         System.out.println("forgot password clicked");
+    }
+
+    public void cancelClicked(View view) {
+        setContentView(R.layout.activity_log_in);
+        System.out.println("Cancel clicked.");
     }
 
 //    Button btn = (Button)findViewById(R.id.Button_LogIn);
