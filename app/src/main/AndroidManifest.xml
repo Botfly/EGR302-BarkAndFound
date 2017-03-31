@@ -21,7 +21,6 @@
         <activity android:name=".LogIn" />
         <activity android:name=".BuyCollar" />
         <activity android:name=".ForgotPassword"></activity>
-        <activity android:name=".LogIn"/>
         <activity
             android:name=".Scanner"
             android:label="@string/title_activity_scanner"
