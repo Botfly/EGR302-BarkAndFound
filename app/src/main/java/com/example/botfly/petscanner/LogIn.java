@@ -23,13 +23,17 @@ public class LogIn extends AppCompatActivity {
     }
 
     public void forgotPasswordClicked(View view) { //redirect to Forgot Password xml page
-        setContentView(R.layout.activity_log_in);
+        setContentView(R.layout.activity_forgot_password);
         System.out.println("forgot password clicked");
     }
 
     public void cancelClicked(View view) {
         setContentView(R.layout.activity_log_in);
         System.out.println("Cancel clicked.");
+    }
+
+    public void sendEmailClicked(View view) {
+        //send email to the email entered
     }
 
 //    Button btn = (Button)findViewById(R.id.Button_LogIn);
