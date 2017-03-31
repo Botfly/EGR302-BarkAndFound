@@ -12,7 +12,4 @@ public class ForgotPassword extends AppCompatActivity {
         setContentView(R.layout.activity_forgot_password);
     }
 
-    public void sendEmailClicked(View view) {
-        setContentView(R.layout.activity_forgot_password);
-    }
 }

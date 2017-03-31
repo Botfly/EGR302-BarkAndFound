@@ -3,6 +3,7 @@ package com.example.botfly.petscanner;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 
 public class LogIn extends AppCompatActivity {
 
@@ -33,7 +34,15 @@ public class LogIn extends AppCompatActivity {
     }
 
     public void sendEmailClicked(View view) {
-        //send email to the email entered
+        EditText emailEditText = (EditText) findViewById(R.id.editText_enterEmail);
+        if (!emailEditText.getText().toString().matches("")) {
+            setContentView(R.layout.activity_email_sent);
+            //TODO: send email to the email entered
+        }
+    }
+
+    public void backToLoginClicked(View view) {
+        setContentView(R.layout.activity_log_in);
     }
 
 //    Button btn = (Button)findViewById(R.id.Button_LogIn);

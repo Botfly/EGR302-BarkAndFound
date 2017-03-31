@@ -10,4 +10,26 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.botfly.petscanner.EmailSent">
 
+    <TextView
+        android:id="@+id/textView_emailSent"
+        android:text="Email sent!"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="150dp"
+        />
+
+    <Button
+        android:id="@+id/button_backToHomeScreen"
+        android:text="Back to LogIn Page"
+        android:textColor="#006400"
+        android:backgroundTint="#6600ff00"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="400dp"
+
+        android:onClick="backToLoginClicked"/>
 </RelativeLayout>

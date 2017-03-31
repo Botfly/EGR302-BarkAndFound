@@ -22,6 +22,7 @@
         <activity android:name=".LogIn" />
         <activity android:name=".BuyCollar" />
         <activity android:name=".ForgotPassword" />
+        <activity android:name=".EmailSent" />
         <activity
             android:name=".Scanner"
             android:label="@string/title_activity_scanner"
@@ -32,7 +33,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".EmailSent"></activity>
     </application>
 
 </manifest>
