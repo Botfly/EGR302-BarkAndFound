@@ -23,15 +23,13 @@ public class Register extends AppCompatActivity {
         setContentView(R.layout.activity_register);
 
         //Creates button to update database in real-time
-        register = (Button) findViewById(R.id.register);
+        register = (Button) findViewById(R.id.Register);
 
         //creates link reference to database
         mDatabase = FirebaseDatabase.getInstance().getReference();
+        firstName = (EditText) findViewById(R.id.first_name);
 
-        firstName = (EditText) findViewById(R.name_field);
-
-
-
+        //On Click Listener
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
