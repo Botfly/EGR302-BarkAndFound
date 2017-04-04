@@ -13,6 +13,11 @@ public class Register extends AppCompatActivity {
 
     private Button register;
     private EditText firstName;
+    private EditText lastName;
+    private EditText emailAddress;
+    private EditText password;
+    private EditText confirmPassword;
+
     //Creates instance of the database
     private DatabaseReference mDatabase;
 
@@ -27,7 +32,12 @@ public class Register extends AppCompatActivity {
 
         //creates link reference to database
         mDatabase = FirebaseDatabase.getInstance().getReference();
+
+        //Creates local variable for user input on each field
         firstName = (EditText) findViewById(R.id.first_name);
+        lastName = (EditText) findViewById(R.id.last_name);
+        emailAddress = (EditText) findViewById(R.id.email_address);
+        confirmPassword = (EditText) findViewById(R.id.confirm_password);
 
         //On Click Listener
         register.setOnClickListener(new View.OnClickListener() {
@@ -35,9 +45,11 @@ public class Register extends AppCompatActivity {
             public void onClick(View view) {
 
                 String name = firstName.getText().toString().trim();
+                String lName = lastName.getText().toString().trim();
+
                 // 1 - create a child in root of the database
                 mDatabase.child("First Name").setValue(name);
-                mDatabase.child("Last Name");
+                mDatabase.child("Last Name").setValue(lName);
                 mDatabase.child("Email Address");
                 mDatabase.child("Password");
                 mDatabase.child("Confirm Password");
