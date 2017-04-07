@@ -23,14 +23,16 @@
         />
 
     <Button
+        android:id="@+id/Register"
         android:text="Register"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/Register"
         android:layout_marginBottom="11dp"
         android:layout_alignParentBottom="true"
         android:layout_alignLeft="@+id/confirm_password"
-        android:layout_alignStart="@+id/confirm_password" />
+        android:layout_alignStart="@+id/confirm_password"
+        android:onClick="registerClicked"
+        />
 
     <EditText
         android:layout_width="wrap_content"

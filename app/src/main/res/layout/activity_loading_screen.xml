@@ -8,6 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#3300ff00"
     tools:context="com.example.botfly.petscanner.LoadingScreen">
 
     <!--app logo: -->
@@ -22,10 +23,8 @@
         />
 
     <TextView
-        android:id="@+id/textView_appName"
+        android:id="@+id/textView_appNameLoadingScreen"
         android:text="Bark and Found"
-        android:fontFamily=""
-
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
