@@ -45,6 +45,10 @@ public class LogIn extends AppCompatActivity {
         setContentView(R.layout.activity_log_in);
     }
 
+    public void cancelForgotPasswordClicked(View view) {
+        setContentView(R.layout.activity_log_in);
+    }
+
 //    Button btn = (Button)findViewById(R.id.Button_LogIn);
 //
 //    btn.setOnClickListener(new View.OnClickListener() {
