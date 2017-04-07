@@ -35,49 +35,45 @@
 
     <!--Username Text Field: -->
     <EditText
-        android:id="@+id/editText_username"
-        android:hint="email / username"
-        android:textAlignment="center"
+        android:id="@+id/email_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textEmailAddress"
-        android:ems="10"
-        android:layout_marginTop="200dp"
         android:layout_centerHorizontal="true"
-        />
+        android:layout_marginTop="200dp"
+        android:ems="10"
+        android:hint="email / username"
+        android:inputType="textEmailAddress"
+        android:textAlignment="center" />
 
     <!--Username Background: -->
     <View
         android:id="@+id/view"
         android:layout_width="215dp"
         android:layout_height="42.5dp"
-        android:background="#334E4B4F"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="200dp"
-        />
+        android:background="#334E4B4F" />
 
     <!--Password Text Field: -->
     <EditText
-        android:id="@+id/editText_password"
-        android:hint="password"
-        android:textAlignment="center"
+        android:id="@+id/pass_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textPassword"
-        android:ems="10"
-        android:layout_marginTop="260dp"
         android:layout_centerHorizontal="true"
-        />
+        android:layout_marginTop="260dp"
+        android:ems="10"
+        android:hint="password"
+        android:inputType="textPassword"
+        android:textAlignment="center" />
 
     <!--Password Background: -->
     <View
-        android:id="@+id/view2"
+        android:id="@+id/view1"
         android:layout_width="215dp"
         android:layout_height="42.5dp"
-        android:background="#334E4B4F"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="260dp"
-        />
+        android:background="#334E4B4F" />
 
     <!--Log-in Button: -->
     <Button

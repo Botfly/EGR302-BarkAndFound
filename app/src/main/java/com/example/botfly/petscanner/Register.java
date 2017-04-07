@@ -57,11 +57,15 @@ public class Register extends AppCompatActivity {
 
                 String name = firstName.getText().toString().trim();
                 String lName = lastName.getText().toString().trim();
+                String mail = emailAddress.getText().toString().trim();
+                String pass = confirmPassword.getText().toString().trim();
 
                 //Create Hash-map to make object with all the fields
                 HashMap<String, String> dataMap = new HashMap<String, String>();
                 dataMap.put("Name", name);
                 dataMap.put("Last Name", lName);
+                dataMap.put("Email", mail);
+                dataMap.put("Password", pass);
 
                 //Push Hash Object to root of Database
                 //The on-complete listener makes sure the information was pushed
