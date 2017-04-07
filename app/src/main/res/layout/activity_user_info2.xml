@@ -13,6 +13,11 @@
     <ScrollView
         android:layout_width="300dp"
         android:layout_height="800dp">
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
     <ImageButton
         android:layout_width="150dp"
@@ -249,6 +254,8 @@
         android:layout_below="@+id/editText15"
         android:layout_toRightOf="@+id/imageButton4"
         android:layout_toEndOf="@+id/imageButton4" />
+
+        </LinearLayout>
 
     </ScrollView>
 
