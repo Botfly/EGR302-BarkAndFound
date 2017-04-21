@@ -62,4 +62,15 @@ public class Scanner extends AppCompatActivity implements ZXingScannerView.Resul
 //        });
     }
 
+    public void scannerLogInButton(View view) {
+        setContentView(R.layout.activity_log_in);
+    }
+
+    public void scannerRegisterButton(View view) {
+        setContentView(R.layout.activity_register);
+    }
+
+    public void scannerQRscanClicked(View view) {
+        System.out.println("QR was pressed insite Scanner.java, not LogIn");
+    }
 }

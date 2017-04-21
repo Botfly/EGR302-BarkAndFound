@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "875269000280-epl5jsb1imenlbki9c4rjvnmd050030e.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.botfly.petscanner",
+            "certificate_hash": "61dfb79d103a87f6d97d24260f3a2e2da2c1a0c6"
+          }
+        },
+        {
           "client_id": "875269000280-sc8e0rsgofr9acup7qmqge05nh3ojfcc.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
