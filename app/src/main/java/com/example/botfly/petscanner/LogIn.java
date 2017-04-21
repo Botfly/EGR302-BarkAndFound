@@ -84,7 +84,7 @@ public class LogIn extends AppCompatActivity {
 
 
     public void loginClicked(View view) { //redirect to the xml page after user logs in
-        setContentView(R.layout.activity_log_in);
+        setContentView(R.layout.activity_pet_list);
         System.out.println("log in clicked");
     }
 
@@ -169,6 +169,18 @@ public class LogIn extends AppCompatActivity {
 
 
 
+    }
+
+    public void petlistToInfoButton(View view) {
+        setContentView(R.layout.activity_user_info2);
+    }
+
+    public void petlistBackButton(View view) {
+        setContentView(R.layout.activity_log_in);
+    }
+
+    public void infoPageBackButton(View view) {
+        setContentView(R.layout.activity_pet_list);
     }
 
 //    Button btn = (Button)findViewById(R.id.Button_LogIn);

@@ -14,7 +14,7 @@
     <!--app logo: -->
     <ImageView
         android:id="@+id/imageView_AppLogo"
-        android:src="@drawable/unknown"
+        android:src="@drawable/logo"
 
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"

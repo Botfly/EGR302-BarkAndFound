@@ -11,4 +11,36 @@
     tools:context="com.example.botfly.petscanner.PetList">
 
 
+    <Button
+        android:id="@+id/button5"
+        android:text="Back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="34dp"
+        android:layout_marginStart="34dp"
+        android:layout_marginBottom="48dp"
+        android:onClick="petlistBackButton"
+        />
+
+    <Button
+        android:id="@+id/button6"
+        android:text="To info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="34dp"
+        android:layout_marginStart="200dp"
+        android:layout_marginBottom="48dp"
+        android:onClick="petlistToInfoButton"
+        />
+
+    <TextView
+        android:text="Temp \nButtons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="48dp"
+        android:id="@+id/textView" />
 </RelativeLayout>
