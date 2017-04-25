@@ -40,8 +40,8 @@ public class LogIn extends AppCompatActivity {
     //Creates instance of the database
     private DatabaseReference mDatabase;
 
-    private TextView dEmail;
-    private TextView dPass;
+    private EditText dEmail;
+    private EditText dPass;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,10 +50,10 @@ public class LogIn extends AppCompatActivity {
         setTypeFace();
 
         mDatabase = FirebaseDatabase.getInstance().getReference().child("Email");
-        dEmail = (TextView) findViewById(R.id.email_view);
+        dEmail = (EditText) findViewById(R.id.email_view);
 
         mDatabase = FirebaseDatabase.getInstance().getReference().child("Password");
-        dPass = (TextView) findViewById(R.id.pass_view);
+        dPass = (EditText) findViewById(R.id.pass_view);
 
         mDatabase.addValueEventListener(new ValueEventListener() {
             @Override

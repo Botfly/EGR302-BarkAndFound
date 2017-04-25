@@ -8,6 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#3300ff00"
     tools:context="com.example.botfly.petscanner.Register">
 
     <Button
@@ -35,6 +36,7 @@
         />
 
     <EditText
+        android:imeOptions="actionDone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
@@ -46,6 +48,7 @@
         android:layout_alignStart="@+id/first_name" />
 
     <EditText
+        android:imeOptions="actionDone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
@@ -56,6 +59,7 @@
         android:layout_centerHorizontal="true" />
 
     <EditText
+        android:imeOptions="actionDone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textEmailAddress"
@@ -67,6 +71,7 @@
         android:layout_alignStart="@+id/last_name" />
 
     <EditText
+        android:imeOptions="actionDone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPassword"
@@ -78,6 +83,7 @@
         android:layout_alignStart="@+id/email_address" />
 
     <EditText
+        android:imeOptions="actionDone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPassword"

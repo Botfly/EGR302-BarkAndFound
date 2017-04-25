@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
+    android:background="#3300ff00"
     tools:context="com.example.botfly.petscanner.Scanner">
 
     <android.support.design.widget.AppBarLayout

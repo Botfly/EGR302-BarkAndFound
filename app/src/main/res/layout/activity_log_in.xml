@@ -36,6 +36,7 @@
 
     <!--Username Text Field: -->
     <EditText
+        android:imeOptions="actionDone"
         android:id="@+id/email_view"
         android:hint="email / username"
         android:inputType="textEmailAddress"
@@ -58,6 +59,7 @@
 
     <!--Password Text Field: -->
     <EditText
+        android:imeOptions="actionDone"
         android:id="@+id/pass_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
