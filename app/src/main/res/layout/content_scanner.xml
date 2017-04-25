@@ -29,7 +29,6 @@
         />
 
     <Button
-        android:id="@+id/scannerQRscanButton"
         android:text="Scan QR Code"
         android:textColor="#ff0000"
         android:backgroundTint="#44ff0000"
