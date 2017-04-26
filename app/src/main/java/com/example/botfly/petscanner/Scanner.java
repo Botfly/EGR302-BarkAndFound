@@ -10,17 +10,17 @@ import android.app.Activity;
 import android.util.Log;
 
 
-public class Scanner extends Activity implements ZXingScannerView.ResultHandler {
+public class Scanner extends AppCompatActivity implements ZXingScannerView.ResultHandler {
     private ZXingScannerView mScannerView;
 
 
-    @Override
+    /*@Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scanner);
-    }
+    }*/
 
-    public void scannerQRscanClicked(View view){
+    public void scannerOnClick(View view){
         mScannerView = new ZXingScannerView(this);
         setContentView(mScannerView);
         mScannerView.setResultHandler(this);

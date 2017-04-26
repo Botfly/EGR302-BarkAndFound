@@ -2,8 +2,10 @@ package com.example.botfly.petscanner;
 
 import android.graphics.Typeface;
 import android.support.annotation.NonNull;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -18,10 +20,13 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.zxing.Result;
 
 import org.w3c.dom.Text;
 
 import java.util.HashMap;
+
+import me.dm7.barcodescanner.zxing.ZXingScannerView;
 
 public class LogIn extends AppCompatActivity {
 
@@ -179,9 +184,17 @@ public class LogIn extends AppCompatActivity {
         setTypeFace();
     }
 
-    public void scannerQRscanClicked(View view) {
-        //todo: Do something when the scan QR code button is pressed
-        // (scan the QR code then store it etc)
+    public void scannerOnClick(View view) {
+
+    }
+
+    public void onPause() {
+
+    }
+
+
+    public void handleResult(Result result) {
+
     }
 
     public void scannerRegisterButton(View view) {
