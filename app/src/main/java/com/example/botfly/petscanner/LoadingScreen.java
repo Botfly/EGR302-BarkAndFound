@@ -22,7 +22,7 @@ public class LoadingScreen extends AppCompatActivity {
             public void run() {
                 try {
                     super.run();
-                    sleep(1500); //delay
+                    sleep(3500); //delay
                 } catch (Exception e) {
 
                 } finally {
