@@ -36,12 +36,49 @@
         android:onClick="petlistToInfoButton"
         />
 
-    <TextView
-        android:text="Temp \nButtons"
+    <Button
+        android:id="@+id/registered_pet1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="Registered Pet: 1"
+        android:layout_above="@+id/registered_pet2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="11dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:id="@+id/registered_pet2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Registered Pet: 2"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:id="@+id/registered_pet3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Registered Pet: 3"
+        android:layout_above="@+id/button5"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="57dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:id="@+id/registered_pet_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Registered Pet List"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        android:layout_above="@+id/registered_pet1"
         android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="48dp"
-        android:id="@+id/textView" />
+        android:layout_marginBottom="44dp" />
+
 </RelativeLayout>
