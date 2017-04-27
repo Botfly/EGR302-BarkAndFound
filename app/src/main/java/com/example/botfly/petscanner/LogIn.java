@@ -2,34 +2,34 @@ package com.example.botfly.petscanner;
 
 import android.graphics.Typeface;
 import android.support.annotation.NonNull;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 import com.google.zxing.Result;
 
-import org.w3c.dom.Text;
-
+import java.util.ArrayList;
 import java.util.HashMap;
-
-import me.dm7.barcodescanner.zxing.ZXingScannerView;
 
 public class LogIn extends AppCompatActivity {
 
+
+    //Pet List View Variable
+    private ListView mPetList;
+    private ArrayList<String> mPetAList = new ArrayList<>();
 
     //Register button to store to database
     private Button register;
@@ -53,10 +53,49 @@ public class LogIn extends AppCompatActivity {
         setContentView(R.layout.activity_log_in);
         setTypeFace();
 
-        mDatabase = FirebaseDatabase.getInstance().getReference().child("Email");
+        /**
+        mDatabase = FirebaseDatabase.getInstance().getReference().child("KigkhxVrWkZ2CI1AHEH");
+        mPetList = ((ListView) findViewById(R.id.pet_list_view));
+
+        final ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_expandable_list_item_1, mPetAList);
+        mPetList.setAdapter(arrayAdapter);
+        mDatabase.addChildEventListener(new ChildEventListener() {
+            @Override
+            public void onChildAdded(DataSnapshot dataSnapshot, String s) {
+                String value = dataSnapshot.getValue(String.class);
+                mPetAList.add(value);
+                arrayAdapter.notifyDataSetChanged();
+            }
+
+            @Override
+            public void onChildChanged(DataSnapshot dataSnapshot, String s) {
+
+            }
+
+            @Override
+            public void onChildRemoved(DataSnapshot dataSnapshot) {
+
+            }
+
+            @Override
+            public void onChildMoved(DataSnapshot dataSnapshot, String s) {
+
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+         **/
+
+        //Retrive data from database and store read values and populate the
+        //the login and password fields so you can login easily.
+        /**
+        mDatabase = FirebaseDatabase.getInstance().getReference().child("KigjAAg2t8OvSuIJVqK");
         dEmail = (EditText) findViewById(R.id.email_view);
 
-        mDatabase = FirebaseDatabase.getInstance().getReference().child("Password");
+        mDatabase = FirebaseDatabase.getInstance().getReference().child("KigjAAg2t8OvSuIJVqK");
         dPass = (EditText) findViewById(R.id.pass_view);
 
         mDatabase.addValueEventListener(new ValueEventListener() {
@@ -74,6 +113,7 @@ public class LogIn extends AppCompatActivity {
 
             }
         });
+         **/
     }
 
     public void setTypeFace() {
@@ -90,6 +130,47 @@ public class LogIn extends AppCompatActivity {
     public void loginClicked(View view) { //redirect to the xml page after user logs in
         setContentView(R.layout.activity_pet_list);
         System.out.println("log in clicked");
+    }
+
+    //Refreshes the Registered-Pet-List on the Pet-List page
+    //Maps the button to refresh the page
+    public void refreshListClicked(View view){
+
+        mDatabase = FirebaseDatabase.getInstance().getReference();
+                //.child("KigkhxVrWkZ2CI1AHEH");
+        mPetList = ((ListView) findViewById(R.id.pet_list_view));
+
+        final ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_expandable_list_item_1, mPetAList);
+        mPetList.setAdapter(arrayAdapter);
+        mDatabase.addChildEventListener(new ChildEventListener() {
+            @Override
+            public void onChildAdded(DataSnapshot dataSnapshot, String s) {
+                String value = dataSnapshot.getValue(String.class);
+                mPetAList.add(value);
+                arrayAdapter.notifyDataSetChanged();
+            }
+
+            @Override
+            public void onChildChanged(DataSnapshot dataSnapshot, String s) {
+
+            }
+
+            @Override
+            public void onChildRemoved(DataSnapshot dataSnapshot) {
+
+            }
+
+            @Override
+            public void onChildMoved(DataSnapshot dataSnapshot, String s) {
+
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+        setContentView(R.layout.activity_pet_list);
     }
 
     public void signUpClicked(View view) { //redirect to Sign Up xml page
