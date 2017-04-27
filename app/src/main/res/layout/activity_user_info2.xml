@@ -24,17 +24,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-    <ImageButton
-        android:layout_width="150dp"
-        app:srcCompat="@android:drawable/picture_frame"
-        android:id="@+id/imageButton4"
-        android:layout_height="150dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignBottom="@+id/userInfoPageOwnerAlternatePhoneNumber" />
-
-    <EditText
+            <EditText
         android:layout_width="wrap_content"
         android:imeOptions="actionDone"
         android:layout_height="wrap_content"
@@ -74,21 +64,7 @@
         android:layout_alignParentEnd="true"
         android:hint="Alternate Phone #" />
 
-    <EditText
-        android:imeOptions="actionDone"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textEmailAddress"
-        android:ems="10"
-        android:layout_below="@+id/imageButton4"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:id="@+id/userInfoPageOwnerEmailAddress"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:hint="Email Address" />
-
-    <EditText
+            <EditText
         android:imeOptions="actionDone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -252,8 +228,7 @@
         android:layout_alignParentStart="true" />
 
             <Button
-                android:id="@+id/Submit"
-                android:layout_width="100dp"
+                android:id="@+id/InfoPageSubmitButton"
                 android:layout_height="50dp"
                 android:layout_alignBaseline="@+id/button3"
                 android:layout_alignBottom="@+id/button3"
@@ -261,19 +236,43 @@
                 android:layout_marginStart="68dp"
                 android:layout_toEndOf="@+id/button3"
                 android:layout_toRightOf="@+id/button3"
-                android:onClick="SubmitClicked"
-                android:text="Submit" />
+                android:onClick="InfoPageSubmitButton"
+                android:text="BuyCollar"
+                android:layout_width="110dp" />
 
     <Button
         android:text="Back"
         android:id="@+id/button3"
-        android:layout_width="100dp"
         android:layout_height="50dp"
         android:layout_marginTop="46dp"
-        android:layout_marginLeft="60dp"
+        android:layout_marginLeft="46dp"
         android:layout_below="@+id/userInfoPagePetIrritations"
         android:onClick="infoPageBackButton"
-        />
+        android:layout_width="110dp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/logo"
+                android:id="@+id/userInfoPageProfilePicture"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@+id/userInfoPageOwnerName"
+                android:layout_toLeftOf="@+id/userInfoPageOwnerName"
+                android:layout_above="@+id/userInfoPageOwnerEmailAddress" />
+
+            <EditText
+                android:imeOptions="actionDone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:ems="10"
+                android:id="@+id/userInfoPageOwnerEmailAddress"
+                android:hint="Email Address"
+                android:layout_below="@+id/userInfoPageOwnerAlternatePhoneNumber"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
 
         </RelativeLayout>
 
