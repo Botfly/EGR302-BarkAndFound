@@ -11,4 +11,27 @@
     android:background="#3300ff00"
     tools:context="com.example.botfly.petscanner.BuyCollar">
 
+    <TextView
+        android:text="Credit Card Info:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/textView"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/spinner_view"
+        android:paddingTop="30dp"
+        />
+
 </RelativeLayout>
+
