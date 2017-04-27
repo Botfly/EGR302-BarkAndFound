@@ -31,6 +31,7 @@ import me.dm7.barcodescanner.zxing.ZXingScannerView;
 public class LogIn extends AppCompatActivity {
 
 
+    //Register button to store to database
     private Button register;
     private EditText firstName;
     private EditText lastName;
@@ -39,15 +40,13 @@ public class LogIn extends AppCompatActivity {
     private EditText confirmPassword;
 
     //Creates instance of the database
-    //private DatabaseReference mDatabase;
-
-
-    //Creates instance of the database
     private DatabaseReference mDatabase;
 
     private EditText dEmail;
     private EditText dPass;
 
+    //Retrive data from database and store read values and populate the
+    //the login and password fields so you can login easily.
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -130,8 +129,7 @@ public class LogIn extends AppCompatActivity {
     public void registerClicked(View view) {
         //creates link reference to root of database
         mDatabase = FirebaseDatabase.getInstance().getReference();
-        //Creates link reference to root of a specific user
-        //mDatabase = FirebaseDatabase.getInstance().getReference().getchild("User_01");
+
 
         //Creates local variable for user input on each field
         String name = ((EditText) findViewById(R.id.first_name)).getText().toString().trim();
@@ -152,9 +150,64 @@ public class LogIn extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
                 if(task.isSuccessful()){
-                    //Toast.makeText(Register.this, "Stored..", Toast.LENGTH_LONG).show();
+                    Toast.makeText(LogIn.this, "Registered!", Toast.LENGTH_LONG).show();
                 }else {
-                    //Toast.makeText(Register.this, "", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LogIn.this, "Try Again", Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+        setContentView(R.layout.activity_log_in);
+        setTypeFace();
+    }
+
+    //Stores data that the user inputted from the User-Info page and stores it
+    //in the database
+    public void SubmitClicked(View view) {
+        //creates link reference to root of database
+        mDatabase = FirebaseDatabase.getInstance().getReference();
+
+        //Creates local variable for user input on each field
+        String ownerName = ((EditText) findViewById(R.id.userInfoPageOwnerName)).getText().toString().trim();
+        String phoneNumber = ((EditText) findViewById(R.id.userInfoPageOwnerPhoneNumber)).getText().toString().trim();
+        String altPhoneNumber = ((EditText) findViewById(R.id.userInfoPageOwnerAlternatePhoneNumber)).getText().toString().trim();
+        String email = ((EditText) findViewById(R.id.userInfoPageOwnerEmailAddress)).getText().toString().trim();
+        String postal = ((EditText) findViewById(R.id.userInfoPageOwnerPostalAddress)).getText().toString().trim();
+        String emergencyName = ((EditText) findViewById(R.id.userInfoPageEmergencyContactName)).getText().toString().trim();
+        String emergencyPhone = ((EditText) findViewById(R.id.userInfoPageEmergencyContactPhoneNumber)).getText().toString().trim();
+        String emergencyEmail = ((EditText) findViewById(R.id.userInfoPageEmergencyContactEmailAddress)).getText().toString().trim();
+        String petName = ((EditText) findViewById(R.id.userInfoPagePetName)).getText().toString().trim();
+        String petBreed = ((EditText) findViewById(R.id.userInfoPagePetBreed)).getText().toString().trim();
+        String petFood = ((EditText) findViewById(R.id.userInfoPagePetFoodAndDrink)).getText().toString().trim();
+        String petMedications = ((EditText) findViewById(R.id.userInfoPagePetMedicationsAndAllergies)).getText().toString().trim();
+        String petCommands = ((EditText) findViewById(R.id.userInfoPagePetKnownCommands)).getText().toString().trim();
+        String petIrritate = ((EditText) findViewById(R.id.userInfoPagePetIrritations)).getText().toString().trim();
+
+        HashMap<String, String> dataMap = new HashMap<String, String>();
+        dataMap.put("Owner Name", ownerName);
+        dataMap.put("Owner Phone", phoneNumber);
+        dataMap.put("Owner Alt Phone", altPhoneNumber);
+        dataMap.put("Owner Email", email);
+        dataMap.put("Owner Postal", postal);
+        dataMap.put("Emergency Name", emergencyName);
+        dataMap.put("Emergency Email", emergencyEmail);
+        dataMap.put("Emergency Phone", emergencyPhone);
+        dataMap.put("Pet Name", petName);
+        dataMap.put("Pet Breed", petBreed);
+        dataMap.put("Pet Food", petFood);
+        dataMap.put("Pet Medications", petMedications);
+        dataMap.put("Pet Commands", petCommands);
+        dataMap.put("Pet Irritate", petIrritate);
+
+        //Push Hash Object to root of Database
+        //The on-complete listener makes sure the information was pushed
+        //successfully to the database.
+        mDatabase.push().setValue(dataMap).addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+                if(task.isSuccessful()){
+                    Toast.makeText(LogIn.this, "Registered!", Toast.LENGTH_LONG).show();
+                }else {
+                    Toast.makeText(LogIn.this, "Try Again", Toast.LENGTH_LONG).show();
                 }
             }
         });

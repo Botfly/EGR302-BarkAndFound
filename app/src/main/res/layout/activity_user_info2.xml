@@ -251,17 +251,18 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
-    <Button
-        android:text="Submit"
-        android:id="@+id/button"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:layout_alignBaseline="@+id/button3"
-        android:layout_alignBottom="@+id/button3"
-        android:layout_toRightOf="@+id/button3"
-        android:layout_toEndOf="@+id/button3"
-        android:layout_marginLeft="68dp"
-        android:layout_marginStart="68dp" />
+            <Button
+                android:id="@+id/Submit"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_alignBaseline="@+id/button3"
+                android:layout_alignBottom="@+id/button3"
+                android:layout_marginLeft="68dp"
+                android:layout_marginStart="68dp"
+                android:layout_toEndOf="@+id/button3"
+                android:layout_toRightOf="@+id/button3"
+                android:onClick="SubmitClicked"
+                android:text="Submit" />
 
     <Button
         android:text="Back"
