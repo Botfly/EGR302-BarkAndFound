@@ -24,6 +24,8 @@ import com.google.zxing.Result;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import static android.R.attr.key;
+
 public class LogIn extends AppCompatActivity {
 
 
@@ -137,7 +139,10 @@ public class LogIn extends AppCompatActivity {
     public void refreshListClicked(View view){
 
         mDatabase = FirebaseDatabase.getInstance().getReference();
-                //.child("KigkhxVrWkZ2CI1AHEH");
+        // This line creates a child DatabaseReference, but you don't assign
+        // the child to a variable
+        mDatabase.child("-KigkhxVrWkZ2CI1AHEH").child("Owner Name");
+
         mPetList = ((ListView) findViewById(R.id.pet_list_view));
 
         final ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_expandable_list_item_1, mPetAList);
@@ -145,7 +150,7 @@ public class LogIn extends AppCompatActivity {
         mDatabase.addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(DataSnapshot dataSnapshot, String s) {
-                String value = dataSnapshot.getValue(String.class);
+                String value = dataSnapshot.child("-KigkhxVrWkZ2CI1AHEH").child("Owner Name").getValue(String.class);
                 mPetAList.add(value);
                 arrayAdapter.notifyDataSetChanged();
             }
