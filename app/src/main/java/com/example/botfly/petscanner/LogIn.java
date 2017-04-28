@@ -297,9 +297,11 @@ public class LogIn extends AppCompatActivity {
         setContentView(R.layout.activity_pet_list);
     }
 
+    /**
     public void loginScannerClicked (View view) {
         setContentView(R.layout.content_scanner);
     }
+     **/
 
     public void InfoPageSubmitButton (View view) {
         setContentView(R.layout.activity_buy_collar);

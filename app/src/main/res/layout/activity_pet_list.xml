@@ -10,6 +10,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:adjustViewBounds="true"
     tools:context="com.example.botfly.petscanner.LogIn">
 
 
@@ -17,37 +18,36 @@
         android:id="@+id/button5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="petlistBackButton"
+        android:text="Back"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentStart="true"
-        android:onClick="petlistBackButton"
-        android:text="Back" />
+        android:layout_alignParentStart="true" />
 
     <Button
         android:id="@+id/refresh_list"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/button5"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentStart="true"
         android:onClick="refreshListClicked"
-        android:text="Refresh List" />
+        android:text="Refresh List"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true" />
 
     <Button
         android:id="@+id/button7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/refresh_list"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentStart="true"
         android:onClick="petlistToInfoButton"
-        android:text="Register New Pet" />
+        android:text="Register New Pet"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true" />
 
     <TextView
         android:id="@+id/registered_pet_list"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:text="Registered Pet List"
         android:textAppearance="@style/TextAppearance.AppCompat.Large" />
@@ -57,6 +57,5 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@+id/button7"
-        android:layout_alignParentStart="true"
         android:layout_below="@+id/registered_pet_list" />
 </RelativeLayout>
