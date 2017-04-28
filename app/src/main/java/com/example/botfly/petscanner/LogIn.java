@@ -327,6 +327,15 @@ public class LogIn extends AppCompatActivity {
         setTypeFace();
     }
 
+    public void CreditCardCancelButtonClicked(View view)
+    {
+        setContentView(R.layout.activity_user_info2);
+    }
+
+    public void CreditCardSubmitButtonClicked(View view){
+        setContentView(R.layout.activity_pet_list);
+    }
+
     public void scannerOnClick(View view) {
 
     }
