@@ -1,5 +1,6 @@
 package com.example.botfly.petscanner;
 
+import android.app.ListActivity;
 import android.graphics.Typeface;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -28,10 +29,14 @@ import static android.R.attr.key;
 
 public class LogIn extends AppCompatActivity {
 
+    String petList[] = {"Registered Pet: 1", "Owner Name: Joe Smoe", "Owner Email: handsomeDevil9696@lancermail.com",
+    "Owner Phone: 9998887777", "Owner Postal: 9876 Magnolia st.", "Emergency Name: Jill BillyBob",
+    "Emergency Phone: 3335556666", "Emergency Email: findmydoggie96@gmail.com", "Pet Name: BobbyBoy",
+    "Pet Breed: Husky", "Pet Food: Meat, table scraps, homework", "Pet Irritate: Cats",
+            "Pet Medication Info: Black Lungs, keep away from coal mines", "Pet Commands: sit, eat homework"};
 
     //Pet List View Variable
     private ListView mPetList;
-    private ArrayList<String> mPetAList = new ArrayList<>();
 
     //Register button to store to database
     private Button register;
@@ -135,48 +140,15 @@ public class LogIn extends AppCompatActivity {
     }
 
     //Refreshes the Registered-Pet-List on the Pet-List page
-    //Maps the button to refresh the page
     public void refreshListClicked(View view){
-
-        mDatabase = FirebaseDatabase.getInstance().getReference();
-        // This line creates a child DatabaseReference, but you don't assign
-        // the child to a variable
-        mDatabase.child("-KigkhxVrWkZ2CI1AHEH").child("Owner Name");
 
         mPetList = ((ListView) findViewById(R.id.pet_list_view));
 
-        final ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_expandable_list_item_1, mPetAList);
-        mPetList.setAdapter(arrayAdapter);
-        mDatabase.addChildEventListener(new ChildEventListener() {
-            @Override
-            public void onChildAdded(DataSnapshot dataSnapshot, String s) {
-                String value = dataSnapshot.child("-KigkhxVrWkZ2CI1AHEH").child("Owner Name").getValue(String.class);
-                mPetAList.add(value);
-                arrayAdapter.notifyDataSetChanged();
-            }
-
-            @Override
-            public void onChildChanged(DataSnapshot dataSnapshot, String s) {
-
-            }
-
-            @Override
-            public void onChildRemoved(DataSnapshot dataSnapshot) {
-
-            }
-
-            @Override
-            public void onChildMoved(DataSnapshot dataSnapshot, String s) {
-
-            }
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-
-            }
-        });
-        setContentView(R.layout.activity_pet_list);
+        final ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_expandable_list_item_1, petList);
+        mPetList.setAdapter(adapter);
     }
+
+
 
     public void signUpClicked(View view) { //redirect to Sign Up xml page
         setContentView(R.layout.activity_register);
