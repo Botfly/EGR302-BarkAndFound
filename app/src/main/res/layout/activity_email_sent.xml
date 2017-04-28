@@ -14,7 +14,6 @@
     <TextView
         android:id="@+id/textView_emailSent"
         android:text="Email sent!"
-
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"

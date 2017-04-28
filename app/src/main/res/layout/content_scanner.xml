@@ -13,47 +13,51 @@
     tools:context="com.example.botfly.petscanner.Scanner"
     tools:showIn="@layout/activity_scanner">
 
-    <Button
-        android:id="@+id/scannerLoginButton"
-        android:text="Log In"
-        android:backgroundTint="#6600ff00"
-        android:textColor="#006400"
 
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginLeft="55dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginBottom="6dp"
-        android:onClick="scannerLogInButton"
-        />
 
     <Button
         android:text="Scan QR Code"
         android:textColor="#ff0000"
         android:backgroundTint="#44ff0000"
-
-        android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="true"
         android:layout_width="130dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="6dp"
         android:onClick="scannerOnClick"
-        />
+        android:id="@+id/button4"
+        android:layout_below="@+id/pet_list_btn"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+
 
     <Button
-        android:id="@+id/scannerRegisterButton"
-        android:text="Register"
+        android:id="@+id/pet_list_btn"
         android:backgroundTint="#6600ffff"
-        android:textColor="#0000ff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pet List"
+        android:onClick="petListClicked"
+        android:layout_below="@+id/imageView"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        app:srcCompat="@drawable/scanner"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:id="@+id/button6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginLeft="55dp"
-        android:layout_marginStart="235dp"
-        android:layout_marginBottom="6dp"
-        android:onClick="scannerRegisterButton"
-        />
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:backgroundTint="#6600ffff"
+        android:onClick="logOutClicked"
+        android:text="Log out" />
 
 </RelativeLayout>

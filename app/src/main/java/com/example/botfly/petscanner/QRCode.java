@@ -1,14 +1,13 @@
 package com.example.botfly.petscanner;
 
-import android.app.ListActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class PetList extends ListActivity {
+public class QRCode extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_pet_list);
+        setContentView(R.layout.activity_qrcode);
     }
 }

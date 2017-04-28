@@ -135,8 +135,16 @@ public class LogIn extends AppCompatActivity {
 
 
     public void loginClicked(View view) { //redirect to the xml page after user logs in
-        setContentView(R.layout.activity_pet_list);
+        setContentView(R.layout.activity_scanner);
         System.out.println("log in clicked");
+    }
+    public void logOutClicked(View view) {
+        setContentView(R.layout.activity_log_in);
+        System.out.println("log out clicked");
+    }
+    public void grOkayClicked(View view) {
+        setContentView(R.layout.activity_pet_list);
+        System.out.println("");
     }
 
     //Refreshes the Registered-Pet-List on the Pet-List page
@@ -277,9 +285,12 @@ public class LogIn extends AppCompatActivity {
         setContentView(R.layout.activity_user_info2);
     }
 
+    public void petListClicked(View view) {
+        setContentView(R.layout.activity_pet_list);
+    }
+
     public void petlistBackButton(View view) {
-        setContentView(R.layout.activity_log_in);
-        setTypeFace();
+        setContentView(R.layout.activity_scanner);
     }
 
     public void infoPageBackButton(View view) {
@@ -305,7 +316,8 @@ public class LogIn extends AppCompatActivity {
     }
 
     public void CreditCardSubmitButtonClicked(View view){
-        setContentView(R.layout.activity_pet_list);
+        setContentView(R.layout.activity_qrcode);
+        Toast.makeText(LogIn.this, "Collar Shipping!", Toast.LENGTH_LONG).show();
     }
 
     public void scannerOnClick(View view) {
